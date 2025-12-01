@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Seu Perfil 🚀</h1>
+        <div id="profile"></div>
+        <button onclick="window.location.href='index.html'">Voltar</button>
+    </div>
+    
+    <script>
+        const users = JSON.parse(localStorage.getItem('users')) || [];
+        const lastUser = users[users.length - 1];
+        if (lastUser) {
+            document.getElementById('profile').innerHTML = `
+                <p><strong>Avatar:</strong> ${lastUser.avatar}</p>
+                <p><strong>Nome:</strong> ${lastUser.fullName}</p>
+                <p><strong>Matrícula:</strong> ${lastUser.matricula}</p>
+                <p><strong>E-mail:</strong> ${lastUser.email}</p>
+                <p><strong>Username:</strong> ${lastUser.username}</p>
+            `;
+        } else {
+            document.getElementById('profile').textContent = 'Nenhum perfil encontrado!';
+        }
+    </script>
+</body>
+</html>

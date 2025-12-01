@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Empresarial Descontraído</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Bem-vindo a nossa DDS!</h1>
+            <p>Crie sua conta de forma rápida e divertida para participar do nosso sorteio. Escolha seu avatar e vamos nessa! 😎</p>
+        </header>
+        
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="fullName">Nome Completo:</label>
+                <input type="text" id="fullName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="username">Username (para login):</label>
+                <input type="text" id="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Escolha seu Avatar (Emoji):</label>
+                <div class="avatar-options">
+                    <input type="radio" id="avatar1" name="avatar" value="😀" required>
+                    <label for="avatar1">😀</label>
+                    
+                    <input type="radio" id="avatar2" name="avatar" value="🚀">
+                    <label for="avatar2">🚀</label>
+                    
+                    <input type="radio" id="avatar3" name="avatar" value="🌟">
+                    <label for="avatar3">🌟</label>
+                    
+                    <input type="radio" id="avatar4" name="avatar" value="💼">
+                    <label for="avatar4">💼</label>
+                    
+                    <input type="radio" id="avatar5" name="avatar" value="🎉">
+                    <label for="avatar5">🎉</label>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn">Registrar-se! 🎯</button>
+        </form>
+        
+        <div id="message"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
