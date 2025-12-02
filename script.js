@@ -6,6 +6,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     const email = document.getElementById('email').value.trim();
     const username = document.getElementById('username').value.trim();
     const password = document.getElementById('password').value;
+    const repass = document.getElementById('repassword').value;
     const avatar = document.querySelector('input[name="avatar"]:checked')?.value;
     
     const messageDiv = document.getElementById('message');
@@ -19,6 +20,12 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     
     if (password.length < 6) {
         messageDiv.textContent = 'A senha deve ter pelo menos 6 caracteres! 🔒';
+        messageDiv.className = 'error';
+        return;
+    }
+
+    if (password != repass ){
+        messageDiv.textContent = 'A senhas não estão iguais! ‼️';
         messageDiv.className = 'error';
         return;
     }
