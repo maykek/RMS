@@ -1,32 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
-        <h1>Seu Perfil 🚀</h1>
-        <div id="profile"></div>
-        <button onclick="window.location.href='index.html'">Voltar</button>
+        <h1>VOCÊ FOI HACKEADO!</h1>
+        <h2>Agora tenho seus dados e tenho acesso ao seu dispositivo!</h2>
+        <h2>Se não quiser que seus dados sejam compartilhados você terá que fazer o que eu mandar a partir de agora</h2>
+        <h2>Primeiro passo:</h2>
+        <p>
+            Tome cuidado com o QR Code que você escanea, o link ali pode guardar um grande perigo!
+        </p>
+        <h2>Segundo passo:</h2>
+        <p>
+            Nunca use sua conta de rede social para fazer login de acesso a redes públicas, como o nome ja diz a rede
+            é pública e está sujeita a ataques, principalmente a ataques nos roteadores onde estão armazenados todos os passos 
+            de quem está logado nele.
+        </p> 
+        <h2>Terceiro e último passo:</h2>
+        <p>Me enviar 5 v+ (brincadeira)</p>
+        <p>Guardar essas informações, todo esse material foi feito por alguém que não trabalha com TI ou qualquer desenvolvimento
+            de software ou site, se você caiu na pegadinha de um amador imagina o que um profissional pode fazer?!
+        </p>
+        <h2>Não se preocupe, não tenho nenhum dos seus dados, esse material é somente educativo e será deletado da rede ao fim dessa apresentação!</h2>
+        <div id="profile">
     </div>
-    
-    <script>
-        const users = JSON.parse(localStorage.getItem('users')) || [];
-        const lastUser = users[users.length - 1];
-        if (lastUser) {
-            document.getElementById('profile').innerHTML = `
-                <p><strong>Avatar:</strong> ${lastUser.avatar}</p>
-                <p><strong>Nome:</strong> ${lastUser.fullName}</p>
-                <p><strong>Matrícula:</strong> ${lastUser.matricula}</p>
-                <p><strong>E-mail:</strong> ${lastUser.email}</p>
-                <p><strong>Username:</strong> ${lastUser.username}</p>
-            `;
-        } else {
-            document.getElementById('profile').textContent = 'Nenhum perfil encontrado!';
-        }
-    </script>
+    <button onclick="window.location.href='index.html'">Voltar</button>
+    </div>
+
 </body>
+
 </html>
